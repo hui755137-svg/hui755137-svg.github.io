@@ -1,0 +1,88 @@
+:root {
+  --ink: #12212c;
+  --muted: #5f6b70;
+  --line: #d9ded9;
+  --paper: #f8f7f2;
+  --sun: #f1ba56;
+  --coral: #e85d3f;
+  --mint: #cde6d2;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Manrope, Arial, sans-serif; }
+.container { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.hero { min-height: 670px; display: grid; align-items: center; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1fr 0.91fr; gap: 72px; align-items: center; padding: 76px 0 68px; }
+.eyebrow, .section-kicker, .art-label, .axis-label, .metric small, .interest span, .contact-card span, footer { font-family: "DM Mono", monospace; font-size: 11px; letter-spacing: 0; text-transform: uppercase; }
+.eyebrow { display: flex; align-items: center; gap: 10px; color: var(--muted); margin: 0 0 26px; }
+.eyebrow span { width: 8px; height: 8px; border-radius: 50%; background: var(--coral); display: block; }
+h1 { font-size: clamp(62px, 8vw, 112px); line-height: .86; letter-spacing: 0; margin: 0; font-weight: 800; }
+h1 em { font-family: "Playfair Display", Georgia, serif; font-weight: 600; color: var(--coral); }
+.intro { max-width: 510px; color: var(--muted); font-size: 18px; line-height: 1.7; margin: 32px 0; }
+.intro strong { color: var(--ink); font-weight: 700; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.button { min-height: 48px; padding: 0 17px; display: inline-flex; align-items: center; gap: 9px; text-decoration: none; font-weight: 700; font-size: 14px; transition: transform .2s, background .2s; }
+.button:hover { transform: translateY(-2px); }
+.button svg, .icon-button svg { width: 17px; }
+.button-primary { color: white; background: var(--ink); }
+.button-secondary { color: var(--ink); border: 1px solid var(--line); }
+.data-art { height: 390px; position: relative; background: var(--mint); overflow: hidden; }
+.art-grid { position: absolute; inset: 0; opacity: .6; background-image: linear-gradient(#9ab8a5 1px, transparent 1px), linear-gradient(90deg, #9ab8a5 1px, transparent 1px); background-size: 41px 41px; }
+.data-art svg { width: 100%; height: 100%; position: absolute; inset: 0; }
+.series { fill: none; stroke-width: 4; stroke-linecap: round; }
+.ghost { stroke: #477a61; stroke-dasharray: 1 11; }
+.active { stroke: url(#forecastLine); }
+.confidence { fill: #f7e4ae; opacity: .72; }
+.divider { stroke: #477a61; stroke-width: 1.5; stroke-dasharray: 6 8; }
+.point { fill: var(--coral); stroke: var(--paper); stroke-width: 3; }
+.art-label { position: absolute; top: 19px; left: 20px; color: #2f6448; font-weight: 500; }
+.axis-label { position: absolute; bottom: 18px; left: 20px; color: #477a61; font-size: 10px; }
+.axis-label span { margin: 0 5px; }
+.metric { position: absolute; right: 20px; top: 19px; text-align: right; color: var(--ink); }
+.metric b { display: block; font: 700 34px/1 "Playfair Display", Georgia, serif; }
+.metric small { color: #477a61; }
+.focus-strip { background: var(--ink); color: white; }
+.strip-grid { min-height: 230px; display: grid; grid-template-columns: 1fr 1.15fr 1.15fr; align-items: stretch; }
+.section-kicker { margin: 0; color: #76919a; padding-top: 31px; }
+.interest { padding: 31px 24px; border-left: 1px solid #3c4a51; display: flex; flex-direction: column; justify-content: space-between; }
+.interest span { color: var(--sun); }
+.interest h2 { margin: 32px 0 0; font: 600 clamp(25px, 3vw, 39px)/1.05 "Playfair Display", Georgia, serif; letter-spacing: 0; }
+.about-section { padding: 112px 0; }
+.about-grid { display: grid; grid-template-columns: 1fr 2.3fr; gap: 48px; }
+.about-text { max-width: 760px; margin: 0 0 42px; font: 600 clamp(27px, 3.4vw, 46px)/1.27 "Playfair Display", Georgia, serif; }
+.contact-card { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); padding: 20px 0; display: grid; grid-template-columns: 40px 1fr 38px; align-items: center; gap: 12px; }
+.contact-icon { width: 35px; height: 35px; background: var(--sun); display: grid; place-items: center; }
+.contact-icon svg { width: 18px; }
+.contact-card span { color: var(--muted); display: block; margin-bottom: 5px; }
+.contact-card a:not(.icon-button) { color: var(--ink); font-size: 15px; font-weight: 700; overflow-wrap: anywhere; }
+.icon-button { width: 38px; height: 38px; display: grid; place-items: center; color: white; background: var(--coral); transition: transform .2s; }
+.icon-button:hover { transform: rotate(45deg); }
+.honors-section { background: #e9eee9; padding: 104px 0; }
+.honors-grid { display: grid; grid-template-columns: 1fr 2.3fr; gap: 48px; }
+.honors-section h2 { font: 700 clamp(38px, 5vw, 64px)/.98 Manrope, Arial, sans-serif; letter-spacing: 0; margin: 0 0 46px; }
+.honors-section h2 em { font-family: "Playfair Display", Georgia, serif; color: var(--coral); font-weight: 600; }
+.honor-row { display: grid; grid-template-columns: 64px 1fr 28px; gap: 18px; align-items: start; padding: 23px 0; border-top: 1px solid #bfcabf; }
+.honor-row:last-child { border-bottom: 1px solid #bfcabf; }
+.honor-year { font: 500 11px "DM Mono", monospace; color: #477a61; padding-top: 4px; }
+.honor-row h3 { margin: 0 0 6px; font-size: 17px; }
+.honor-row p { margin: 0; max-width: 620px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.honor-row svg { width: 19px; color: var(--coral); margin-top: 2px; }
+footer { background: #e8e8e2; color: var(--muted); }
+.footer-inner { min-height: 69px; display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+
+@media (max-width: 760px) {
+  .container { width: min(100% - 32px, 600px); }
+  .hero { min-height: auto; }
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; padding: 68px 0 0; }
+  .intro { font-size: 16px; }
+  .data-art { height: 330px; margin: 0 -16px; }
+  .strip-grid, .about-grid, .honors-grid { grid-template-columns: 1fr; gap: 0; }
+  .section-kicker { padding: 26px 0; }
+  .interest { border-left: 0; border-top: 1px solid #3c4a51; min-height: 160px; }
+  .about-section { padding: 72px 0; }
+  .honors-section { padding: 72px 0; }
+  .honors-section h2 { margin-bottom: 35px; }
+  .about-text { font-size: 28px; }
+  .footer-inner { padding: 18px 0; min-height: auto; flex-direction: column; align-items: flex-start; }
+}
