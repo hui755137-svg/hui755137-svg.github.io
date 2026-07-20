@@ -3,125 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Zhenting Zang - Undergraduate Student in Applied Statistics at Dongbei University of Finance and Economics."
-    />
-    <title>Zhenting Zang | Applied Statistics</title>
+    <meta name="description" content="Personal academic website of Zhenting Zang." />
+    <title>Zhenting Zang</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <section class="hero" aria-labelledby="page-title">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow"><span></span> Applied Statistics · Dalian, China</p>
-            <h1 id="page-title">Zhenting<br /><em>Zang.</em></h1>
-            <p class="intro">
-              Undergraduate Student in Applied Statistics at
-              <strong>Dongbei University of Finance and Economics.</strong>
-            </p>
-            <div class="actions">
-              <a class="button button-primary" href="mailto:zhentingzang@stumail.dufe.edu.cn">
-                <i data-lucide="mail"></i><span>Get in touch</span>
-              </a>
-              <a class="button button-secondary" href="#research">
-                <span>Explore research</span><i data-lucide="arrow-down-right"></i>
-              </a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top">Zhenting Zang</a>
+        <nav aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#honors">Honors</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="layout">
+      <aside class="profile" aria-label="Profile">
+        <img class="avatar" src="https://github.com/hui755137-svg.png?size=320" alt="Zhenting Zang" />
+        <h1>Zhenting Zang</h1>
+        <p class="role">Undergraduate Student<br />Applied Statistics</p>
+        <p class="institution">Dongbei University of Finance and Economics</p>
+        <div class="profile-links">
+          <a href="mailto:zhentingzang@stumail.dufe.edu.cn"><i data-lucide="mail"></i><span>zhentingzang@stumail.dufe.edu.cn</span></a>
+          <a href="https://github.com/hui755137-svg" target="_blank" rel="noreferrer"><i data-lucide="github"></i> GitHub</a>
+        </div>
+      </aside>
+
+      <div class="content">
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            I am an undergraduate student in Applied Statistics at Dongbei University of Finance and Economics. I am interested in using statistical methods and intelligent systems to solve real-world problems.
+          </p>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <div class="entry">
+            <div class="entry-main">
+              <h3>Dongbei University of Finance and Economics</h3>
+              <p>B.S. candidate in Applied Statistics</p>
             </div>
+            <time>Present</time>
           </div>
-          <div class="data-art" aria-label="Abstract time series visualization">
-            <div class="art-label">FORECAST / 01</div>
-            <div class="art-grid"></div>
-            <svg viewBox="0 0 480 385" role="img" aria-hidden="true">
-              <defs>
-                <linearGradient id="forecastLine" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#e85d3f" />
-                  <stop offset="100%" stop-color="#f1ba56" />
-                </linearGradient>
-              </defs>
-              <path class="confidence" d="M 264 196 C 305 184, 330 190, 358 152 S 426 136, 472 110 L 472 250 C 426 252, 399 277, 358 269 S 302 251, 264 246 Z" />
-              <path class="series ghost" d="M 8 269 C 35 247, 55 252, 79 207 S 120 224, 148 183 S 198 230, 229 197 S 256 197, 264 196" />
-              <path class="series active" d="M 8 269 C 35 247, 55 252, 79 207 S 120 224, 148 183 S 198 230, 229 197 S 256 197, 264 196 S 312 188, 358 152 S 426 136, 472 110" />
-              <line x1="264" y1="56" x2="264" y2="315" class="divider" />
-              <circle cx="264" cy="196" r="6" class="point" />
-            </svg>
-            <div class="axis-label label-x">OBSERVED <span>→</span> PREDICTED</div>
-            <div class="metric"><b>92.4</b><small>signal index</small></div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="focus-strip" id="research" aria-label="Research interests">
-        <div class="container strip-grid">
-          <p class="section-kicker">Research interests</p>
-          <div class="interest"><span>01</span><h2>Time Series<br />Forecasting</h2></div>
-          <div class="interest"><span>02</span><h2>AI Agent<br />Development</h2></div>
-        </div>
-      </section>
+        <section id="research">
+          <h2>Research Interests</h2>
+          <ul class="research-list">
+            <li>Time Series Forecasting</li>
+            <li>AI Agent Development</li>
+          </ul>
+        </section>
 
-      <section class="about-section">
-        <div class="container about-grid">
-          <p class="section-kicker">About</p>
-          <div>
-            <p class="about-text">
-              I am interested in applying statistical thinking and intelligent systems to real-world problems. My work centers on temporal data, reproducible analysis, and practical agent workflows.
-            </p>
-            <div class="contact-card">
-              <div class="contact-icon"><i data-lucide="at-sign"></i></div>
-              <div><span>Academic email</span><a href="mailto:zhentingzang@stumail.dufe.edu.cn">zhentingzang@stumail.dufe.edu.cn</a></div>
-              <a class="icon-button" href="mailto:zhentingzang@stumail.dufe.edu.cn" aria-label="Email Zhenting Zang"><i data-lucide="arrow-up-right"></i></a>
-            </div>
+        <section id="honors">
+          <h2>Honors &amp; Awards</h2>
+          <div class="entry">
+            <div class="entry-main"><h3>Meritorious Winner</h3><p>Mathematical Contest in Modeling (MCM)</p></div>
+            <time>2025</time>
           </div>
-        </div>
-      </section>
-
-      <section class="honors-section" aria-labelledby="honors-title">
-        <div class="container honors-grid">
-          <p class="section-kicker">Honors</p>
-          <div>
-            <h2 id="honors-title">Competition<br /><em>Recognition.</em></h2>
-            <article class="honor-row">
-              <span class="honor-year">2025</span>
-              <div>
-                <h3>Meritorious Winner</h3>
-                <p>Mathematical Contest in Modeling (MCM)</p>
-              </div>
-              <i data-lucide="award" aria-hidden="true"></i>
-            </article>
-            <article class="honor-row">
-              <span class="honor-year">2025</span>
-              <div>
-                <h3>National Second Prize</h3>
-                <p>Zhengda Cup China College Students Market Research and Analysis Competition</p>
-              </div>
-              <i data-lucide="award" aria-hidden="true"></i>
-            </article>
-            <article class="honor-row">
-              <span class="honor-year">2025</span>
-              <div>
-                <h3>National Second Prize, Preliminary Round</h3>
-                <p>National College Student Mathematics Competition</p>
-              </div>
-              <i data-lucide="award" aria-hidden="true"></i>
-            </article>
+          <div class="entry">
+            <div class="entry-main"><h3>National Second Prize</h3><p>Zhengda Cup China College Students Market Research and Analysis Competition</p></div>
+            <time>2025</time>
           </div>
-        </div>
-      </section>
+          <div class="entry">
+            <div class="entry-main"><h3>National Second Prize, Preliminary Round</h3><p>National College Student Mathematics Competition</p></div>
+            <time>2025</time>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <footer>
-      <div class="container footer-inner">
-        <span>© <span id="year"></span> Zhenting Zang</span>
-        <span>Applied Statistics · DUFE</span>
-      </div>
-    </footer>
+    <footer>© <span id="year"></span> Zhenting Zang</footer>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js"></script>
   </body>
